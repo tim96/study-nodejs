@@ -1,0 +1,20 @@
+{
+  "name": "WordsGame",
+  "description": "Words Multiplayer Game",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "author": "tim96",
+  "homepage": "https://github.com/tim96/study-nodejs/tree/master/game1",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
+}
