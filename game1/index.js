@@ -13,6 +13,9 @@ var app = express();
 // Import the Anagrammatix game file.
 var words = require('./wordsgame');
 
+// Serve static html, js, css, and image files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Create an http server with Node's HTTP module.
 var server = require('http').createServer(app).listen(port);
 console.log("Server has started on " + port + ' port');
