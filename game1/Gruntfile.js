@@ -1,23 +1,19 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-        // copy: {
-        //     main: {
-        //         files: [{
-        //             expand: true,
-        //             cwd: 'src/',
-        //             src: ['**'],
-        //             dest: 'dist/'
-        //         }]
-        //     }
-        // }
         copy: {
             js: {
                 files: [
                     {
                         expand: true,
-                        cwd: 'node_modules/jquery',
+                        cwd: 'node_modules/jquery/dist',
                         src: 'jquery.min.js',
                         dest: 'public/js'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'node_modules/bootstrap/dist',
+                        src: ['**'],
+                        dest: 'public/'
                     }
                 ]
             }
