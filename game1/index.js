@@ -14,6 +14,8 @@ var app = express();
 var words = require('./wordsgame');
 
 // Serve static html, js, css, and image files from the 'public' directory
+app.use(express.static(path.join(__dirname, '/node_modules/jquery/dist')));
+app.use(express.static(path.join(__dirname, '/node_modules/bootstrap/dist')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Create an http server with Node's HTTP module.
