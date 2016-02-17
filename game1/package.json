@@ -19,6 +19,8 @@
   "author": "tim96",
   "homepage": "https://github.com/tim96/study-nodejs/tree/master/game1",
   "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
     "jquery": "^2.2.0",
