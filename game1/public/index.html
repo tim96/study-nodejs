@@ -11,11 +11,32 @@
 </head>
 
 <body>
-    <h1>Words game</h1>
+    <div id="gameArea">
+    </div>
+
+    <script id="intro-screen-template" type="text/template">
+
+        <div class="titleWrapper">
+
+            <div class="title">
+                Words game
+            </div>
+
+            <div class="buttons">
+
+                <button id="btnCreateGame" class="btn left">CREATE</button>
+                <button id="btnJoinGame" class="btn right">JOIN</button>
+                <div style="clear:both"></div>
+            </div>
+
+        </div>
+
+    </script>
 </body>
 
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script src="/js/app.min.js"></script>
+<!-- <script src="/js/app.min.js"></script> -->
+<script src="/js/app.js"></script>
 
 </html>
