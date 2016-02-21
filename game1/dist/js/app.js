@@ -15,9 +15,11 @@ jQuery(function($) {
             IO.socket.on('connected', IO.onConnected);
         },
 
-        onConnected : function() {
-            App.mySocketId = IO.socket.socket.sessionid;
+        onConnected : function(data) {
             console.log('onConnected call');
+
+            App.mySocketId = IO.socket.id;
+            console.log(data.message);
         }
     };
 
@@ -75,4 +77,4 @@ jQuery(function($) {
 
     IO.init();
     App.init();
-});
+}($));
