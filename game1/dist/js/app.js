@@ -1,6 +1,26 @@
 jQuery(function($) {
     'use strict';
 
+    var IO = {
+        init: function() {
+            console.log('IO init call');
+
+            IO.socket = io.connect();
+            IO.bindEvents();
+        },
+
+        bindEvents : function() {
+            console.log('IO bindEvents call');
+
+            IO.socket.on('connected', IO.onConnected);
+        },
+
+        onConnected : function() {
+            App.mySocketId = IO.socket.socket.sessionid;
+            console.log('onConnected call');
+        }
+    };
+
     var App = {
 
         gameId: 0,
@@ -53,5 +73,6 @@ jQuery(function($) {
         }
     };
 
+    IO.init();
     App.init();
 });
