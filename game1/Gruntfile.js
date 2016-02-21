@@ -11,6 +11,12 @@ module.exports = function(grunt) {
                     },
                     {
                         expand: true,
+                        cwd: 'node_modules/socket.io-client',
+                        src: 'socket.io.js',
+                        dest: 'public/js'
+                    },
+                    {
+                        expand: true,
                         cwd: 'node_modules/bootstrap/dist',
                         src: ['**'],
                         dest: 'public/'
