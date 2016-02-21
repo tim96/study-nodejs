@@ -19,8 +19,17 @@ var words = require('./wordsgame');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Create an http server with Node's HTTP module.
-var server = require('http').createServer(app).listen(port);
+var server = require('http').createServer(app).listen(process.env.PORT || port);
 console.log("Server has started on " + port + ' port');
 
 // Instantiate Socket.IO hand have it listen on the Express/HTTP server
 var io = require('socket.io').listen(server);
+
+io.sockets.on('connection', function (socket) {
+    console.log('client connected');
+    words.initGame(io, socket);
+
+    socket.on('disconnect', function(){
+        console.log('client disconnected');
+    });
+});
