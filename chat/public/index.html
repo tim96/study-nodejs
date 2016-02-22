@@ -13,9 +13,27 @@
         #messages li:nth-child(odd) { background: #eee; }
     </style>
 
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="js/socket.io.js"></script>
     <script>
-        var socket = io();
+        $(function() {
+            var socket = io();
+
+            $(window).on('beforeunload', function() {
+                socket.close();
+            });
+
+            $('form').submit(function(){
+                socket.emit('chat message', $('#m').val());
+                $('#m').val('');
+                return false;
+            });
+
+            socket.on('chat message', function(msg){
+                $('#messages').append($('<li>').text(msg));
+            });
+
+        });
     </script>
 </head>
 <body>
