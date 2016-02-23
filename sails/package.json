@@ -12,5 +12,6 @@
   "author": "tim96",
   "homepage": "https://github.com/tim96/study-nodejs/tree/master/sails",
   "dependencies": {
+    "sails": "^0.12.1"
   }
 }
