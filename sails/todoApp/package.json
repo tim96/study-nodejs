@@ -1,8 +1,8 @@
 {
   "name": "todoApp",
   "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
+  "version": "0.0.1",
+  "description": "Sails/Angular Todo Applcation",
   "keywords": [],
   "dependencies": {
     "ejs": "2.3.4",
@@ -28,10 +28,7 @@
     "start": "node app.js"
   },
   "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/anonymous node/sails user/todoApp.git"
-  },
-  "author": "anonymous node/sails user",
+  "homepage": "https://github.com/tim96/study-nodejs/tree/master/sails/todoApp",
+  "author": "tim96",
   "license": ""
 }
