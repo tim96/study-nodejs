@@ -1,0 +1,17 @@
+{
+  "name": "Tutorial",
+  "description": "Tutorial 4. Phaser.io example",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js"
+  },
+  "author": "tim96",
+  "homepage": "https://github.com/tim96/study-nodejs/tree/master/phaser.io/tutorial4",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
